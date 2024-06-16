@@ -1,0 +1,79 @@
+<!--
+File: Index.html
+GUI Assignment: Creating Your First Web Page
+Adam El-Telbani, UMass Lowell Computer Science, Adam_ElTelbani@student.uml.edu
+Copyright (c) 2024 by Adam. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Adam on June 16th, 2024 at 8:20PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiplication Table Generator V3</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slider-label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Multiplication Table Generator</h1>
+                <fieldset class="border p-4 small-fieldset">
+                    <legend class="w-auto">Please enter table ranges</legend>
+                    <form id="rangeForm">
+                        <div class="form-group">
+                            <label for="minCol">Minimum Column Value:</label>
+                            <div id="minColSlider"></div>
+                            <span class="slider-label" id="minColLabel">0</span>
+                            <input type="hidden" id="minCol" name="minCol" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxCol">Maximum Column Value:</label>
+                            <div id="maxColSlider"></div>
+                            <span class="slider-label" id="maxColLabel">0</span>
+                            <input type="hidden" id="maxCol" name="maxCol" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="minRow">Minimum Row Value:</label>
+                            <div id="minRowSlider"></div>
+                            <span class="slider-label" id="minRowLabel">0</span>
+                            <input type="hidden" id="minRow" name="minRow" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxRow">Maximum Row Value:</label>
+                            <div id="maxRowSlider"></div>
+                            <span class="slider-label" id="maxRowLabel">0</span>
+                            <input type="hidden" id="maxRow" name="maxRow" value="0">
+                        </div>
+                        <button type="submit" class="btn save-table">Save Table</button>
+                    </form>
+                </fieldset>
+                
+                <div class="table-container" id="tableContainer"></div>
+                <div class="error" id="errorContainer"></div>
+                
+                <div id="tabs">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
